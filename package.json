@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production --base-href /artemia-website/",
-    "deploy": "npx angular-cli-ghpages --dir=dist/artemia-website",
+    "deploy:local": "ng build --configuration production --output-path=dist/artemia-website --base-href / & npx serve -s dist/artemia-website",
+    "deploy": "ng build --configuration production --output-path=dist/artemia-website --base-href / & npx angular-cli-ghpages --dir=dist/artemia-website",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
