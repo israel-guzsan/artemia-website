@@ -29,6 +29,7 @@
             },
             "development": {
               "optimization": false,
+              "extractLicenses": false,
               "sourceMap": true
             }
           },
@@ -36,9 +37,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "artemia-website:build"
-          }
+          "configurations": {
+            "production": {
+              "buildTarget": "artemia-website:build:production"
+            },
+            "development": {
+              "buildTarget": "artemia-website:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
         }
       }
     }
