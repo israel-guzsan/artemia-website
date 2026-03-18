@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build": "ng build --configuration production --output-path=docs --base-href ./",
     "serve:build": "npx serve -s docs",
-    "deploy": "git add docs && git commit -m 'Deploy SPA to /docs' && git push origin main",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

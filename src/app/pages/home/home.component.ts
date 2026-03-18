@@ -11,7 +11,7 @@ import { CardComponent } from '../../components/card/card.component';
 })
 export class HomeComponent {
 sections = [
-  { title: 'Mundo', image: 'assets/mundo.png', description: 'Conoce el mundo de Artemia', link: '/mundo' },
+  { title: 'Mundo', image: 'assets/mundo.png', description: 'Conoce el mundo', link: '/mundo' },
   { title: 'Historia', image: 'assets/historia.png', description: 'Líneas temporales y eventos', link: '/historia' },
   { title: 'Personajes', image: 'assets/personajes.png', description: 'Conoce a los personajes de Artemia', link: '/personajes' },
 ];
