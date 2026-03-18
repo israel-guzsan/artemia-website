@@ -1,0 +1,9 @@
+<div class="grid">
+  <app-card 
+    *ngFor="let section of sections"
+    [title]="section.title"
+    [image]="section.image"
+    [description]="section.description"
+    [link]="section.link">
+  </app-card>
+</div>
