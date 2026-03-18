@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "deploy:local": "ng build --configuration production --output-path=dist/artemia-website --base-href / & npx serve -s dist/artemia-website",
-    "deploy": "ng build --configuration production --output-path=dist/artemia-website --base-href / & npx angular-cli-ghpages --dir=dist/artemia-website",
+    "build": "ng build --configuration production --output-path=dist/artemia-website --base-href /",
+    "serve:build": "npx serve -s dist/artemia-website",
+    "deploy": "npx angular-cli-ghpages --dir=dist/artemia-website",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -23,7 +24,7 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.2.8",
+    "@angular-devkit/build-angular": "^19.2.22",
     "@angular/cli": "^19.2.8",
     "@angular/compiler-cli": "^19.2.0",
     "@types/jasmine": "~5.1.0",
