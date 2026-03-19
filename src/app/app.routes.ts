@@ -3,9 +3,8 @@ import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'mundo', loadComponent: () => import('./pages/mundo/mundo.component').then(m => m.MundoComponent),
-    children: [{path: 'calendario', loadComponent: () => import('./pages/mundo/calendario/calendario.component').then(m => m.CalendarioComponent)}]
-   },
+  { path: 'mundo', loadComponent: () => import('./pages/mundo/mundo.component').then(m => m.MundoComponent) },
+  { path: 'mundo/calendario', loadComponent: () => import('./pages/mundo/calendario/calendario.component').then(m => m.CalendarioComponent) },
   { path: 'historia', loadComponent: () => import('./pages/historia/historia.component').then(m => m.HistoriaComponent) },
   { path: 'civilizaciones', loadComponent: () => import('./pages/civilizaciones/civilizaciones.component').then(m => m.CivilizacionesComponent) },
   { path: 'magia', loadComponent: () => import('./pages/magia/magia.component').then(m => m.MagiaComponent) },

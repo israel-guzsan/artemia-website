@@ -1,0 +1,25 @@
+.seasons {
+  display: flex;
+  gap: 16px;
+  margin: 40px 0;
+}
+
+.season {
+  flex: 1;
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.season:hover {
+  transform: scale(1.05);
+}
+
+.winter { background: #4a90e2; }
+.spring { background: #7ed957; }
+.summer { background: #f5c542; }
+.autumn { background: #a0522d; }

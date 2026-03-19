@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-mundo',
-  imports: [],
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './mundo.component.html',
-  styleUrl: './mundo.component.scss',
-  standalone: true
+  styleUrls: ['./mundo.component.scss']
 })
 export class MundoComponent {
+  private _router = inject(Router);
 
+  goTo(section: string) {
+    this._router.navigate([`/mundo/${section}`]); // va a /mundo/calendario
+  }
 }
