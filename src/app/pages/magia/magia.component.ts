@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-magia',
   imports: [],
   templateUrl: './magia.component.html',
-  styleUrl: './magia.component.css'
+  styleUrl: './magia.component.css',
+  standalone: true
 })
 export class MagiaComponent {
 

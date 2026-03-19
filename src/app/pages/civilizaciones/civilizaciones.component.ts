@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-civilizaciones',
   imports: [],
   templateUrl: './civilizaciones.component.html',
-  styleUrl: './civilizaciones.component.css'
+  styleUrl: './civilizaciones.component.scss',
+  standalone: true
 })
 export class CivilizacionesComponent {
 

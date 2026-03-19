@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-poder',
   imports: [],
   templateUrl: './poder.component.html',
-  styleUrl: './poder.component.css'
+  styleUrl: './poder.component.scss',
+  standalone: true
 })
 export class PoderComponent {
 

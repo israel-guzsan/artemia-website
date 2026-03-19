@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-historia',
   imports: [],
   templateUrl: './historia.component.html',
-  styleUrl: './historia.component.scss'
+  styleUrl: './historia.component.scss',
+  standalone: true
 })
 export class HistoriaComponent {
 

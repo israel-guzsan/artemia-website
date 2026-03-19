@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-relatos',
   imports: [],
   templateUrl: './relatos.component.html',
-  styleUrl: './relatos.component.css'
+  styleUrl: './relatos.component.css',
+  standalone: true
 })
 export class RelatosComponent {
 
