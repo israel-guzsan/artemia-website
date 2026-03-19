@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NajimComponent } from './najim.component';
+import { CivilizacionesComponent } from './civilizaciones.component';
 
-describe('NajimComponent', () => {
-  let component: NajimComponent;
-  let fixture: ComponentFixture<NajimComponent>;
+describe('CivilizacionesComponent', () => {
+  let component: CivilizacionesComponent;
+  let fixture: ComponentFixture<CivilizacionesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NajimComponent]
+      imports: [CivilizacionesComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NajimComponent);
+    fixture = TestBed.createComponent(CivilizacionesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

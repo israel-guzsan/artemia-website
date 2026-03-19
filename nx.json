@@ -23,5 +23,10 @@
     ]
   },
   "nxCloudId": "69bbc2ae94e12811e09d6b9c",
-  "analytics": true
+  "analytics": true,
+  "generators": {
+    "@nx/angular:component": {
+      "style": "css"
+    }
+  }
 }

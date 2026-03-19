@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NaturalezaComponent } from './naturaleza.component';
+import { PoderComponent } from './poder.component';
 
-describe('NaturalezaComponent', () => {
-  let component: NaturalezaComponent;
-  let fixture: ComponentFixture<NaturalezaComponent>;
+describe('PoderComponent', () => {
+  let component: PoderComponent;
+  let fixture: ComponentFixture<PoderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NaturalezaComponent]
+      imports: [PoderComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NaturalezaComponent);
+    fixture = TestBed.createComponent(PoderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
