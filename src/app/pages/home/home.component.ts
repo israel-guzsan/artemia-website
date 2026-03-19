@@ -11,15 +11,47 @@ import { CardComponent } from '../../components/card/card.component';
 })
 export class HomeComponent {
 sections = [
-  { title: 'Mundo', image: 'assets/home-cards/mundo.png', description: 'Los registros generales sobre Artemia: su forma, sus límites y aquello que lo define.', link: '/mundo' },
-  { title: 'Historia', image: 'assets/home-cards/historia.png', description: 'Guerras olvidadas, eventos que reescribieron el mundo y fragmentos del pasado.', link: '/historia' },
-  { title: 'Naciones', image: 'assets/home-cards/naciones.png', description: 'Territorios, fronteras cambiantes y lugares donde la historia aún se escribe.', link: '/naciones' },
-  { title: 'Culturas', image: 'assets/home-cards/culturas.png', description: 'Razas, culturas y pueblos que habitan Artemia.', link: '/culturas' },
-  { title: 'Naturaleza', image: 'assets/home-cards/naturaleza.png', description: 'Criaturas, ecosistemas y elementos que escapan al control de las civilizaciones.', link: '/naturaleza' },
-  { title: 'Magia', image: 'assets/home-cards/magia.png', description: 'Un poder inestable que cambió el mundo… y a quienes lo usan.', link: '/magia' },
-  { title: 'Najim', image: 'assets/home-cards/najim.png', description: 'Desconocido...', link: '/najim' },
-  { title: 'Facciones', image: 'assets/home-cards/facciones.png', description: 'Órdenes, alianzas y fuerzas que actúan en las sombras o a plena luz.', link: '/facciones' },
-  { title: 'Personajes', image: 'assets/home-cards/personajes.png', description: 'Figuras conocidas, olvidadas o desconocidas que forman parte de estas historias.', link: '/personajes' },
-  { title: 'Relatos', image: 'assets/home-cards/relatos.png', description: 'Pequeñas piezas de algo mucho mayor.', link: '/relatos' }
+  { 
+  title: 'Mundo', 
+  image: 'assets/home-cards/mundo.png', 
+  description: 'Las leyes que rigen la realidad: el paso del tiempo, los ciclos naturales y los secretos que sostienen este mundo.', 
+  link: '/mundo' 
+},
+{ 
+  title: 'Historia', 
+  image: 'assets/home-cards/historia.png', 
+  description: 'Guerras olvidadas, eventos que reescribieron el mundo y fragmentos del pasado.', 
+  link: '/historia' 
+},
+{ 
+  title: 'Civilizaciones', 
+  image: 'assets/home-cards/civilizaciones.png', 
+  description: 'Pueblos, culturas y naciones que han dado forma al mundo y a su identidad a lo largo del tiempo.', 
+  link: '/civilizaciones' 
+},
+{ 
+  title: 'Magia', 
+  image: '', 
+  description: 'Un poder inestable que cambió el mundo… y a quienes lo usan.', 
+  link: '/magia' 
+},
+{ 
+  title: 'Poder', 
+  image: '', 
+  description: 'Facciones, alianzas y fuerzas en conflicto que luchan por influencia, control y supervivencia.', 
+  link: '/poder' 
+},
+{ 
+  title: 'Personajes', 
+  image: '', 
+  description: 'Figuras conocidas, olvidadas o desconocidas que forman parte de estas historias.', 
+  link: '/personajes' 
+},
+{ 
+  title: 'Relatos', 
+  image: '', 
+  description: 'Pequeñas piezas de algo mucho mayor.', 
+  link: '/relatos' 
+}
 ];
 }
