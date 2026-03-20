@@ -1,52 +1,14 @@
-.world-container {
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .world-header {
   text-align: center;
   margin-bottom: 40px;
 }
 
 .world-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
-}
-
-.world-card {
-  cursor: pointer;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #1e1e1e;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.world-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.card-visual {
-  height: 160px;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Temáticas */
-.card-visual.calendario {
-  background: linear-gradient(135deg, #4a90e2, #7ed957, #f5c542, #a0522d);
-}
-
-.card-visual.geografia {
-  background: #3a5a40;
-}
-
-.card-visual.clima {
-  background: #6c91c2;
-}
-
-.card-content {
-  padding: 20px;
+  max-width: 1200px;  
+  margin: 0 auto;
+  padding: 0 16px;
 }

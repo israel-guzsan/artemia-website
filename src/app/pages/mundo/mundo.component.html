@@ -1,22 +1,10 @@
-<section class="world-container">
+<header class="world-header">
+  <h1>Mundo</h1>
+  <p>Las reglas que rigen la realidad de este universo</p>
+</header>
 
-  <header class="world-header">
-    <h1>Mundo</h1>
-    <p>Las reglas que rigen la realidad de este universo</p>
-  </header>
-
-  <div class="world-grid">
-
-    <!-- TARJETA CALENDARIO -->
-    <article class="world-card" (click)="goTo('calendario')">
-      <div class="card-visual calendario"></div>
-      <div class="card-content">
-        <h2>Calendario</h2>
-        <p>
-          El tiempo se mide a través de las calendas, flores que marcan el paso de las estaciones.
-        </p>
-      </div>
-    </article>
-
-  </div>
-</section>
+<div class="world-grid">
+  <app-card *ngFor="let section of worldSections" [title]="section.title" [image]="section.image"
+    [description]="section.description" [link]="section.link">
+  </app-card>
+</div>
