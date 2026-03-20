@@ -31,25 +31,25 @@ sections = [
 },
 { 
   title: 'Magia', 
-  image: '', 
+  image: 'assets/home-cards/magia.png', 
   description: 'Un poder inestable que cambió el mundo… y a quienes lo usan.', 
   link: '/magia' 
 },
 { 
-  title: 'Poder', 
-  image: '', 
+  title: 'Poderes', 
+  image: 'assets/home-cards/poderes.png', 
   description: 'Facciones, alianzas y fuerzas en conflicto que luchan por influencia, control y supervivencia.', 
-  link: '/poder' 
+  link: '/poderes' 
 },
 { 
   title: 'Personajes', 
-  image: '', 
+  image: 'assets/home-cards/personajes.png', 
   description: 'Figuras conocidas, olvidadas o desconocidas que forman parte de estas historias.', 
   link: '/personajes' 
 },
 { 
   title: 'Relatos', 
-  image: '', 
+  image: 'assets/home-cards/relatos.png', 
   description: 'Pequeñas piezas de algo mucho mayor.', 
   link: '/relatos' 
 }

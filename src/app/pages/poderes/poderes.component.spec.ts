@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PoderComponent } from './poder.component';
+import { PoderComponent } from './poderes.component';
 
 describe('PoderComponent', () => {
   let component: PoderComponent;
