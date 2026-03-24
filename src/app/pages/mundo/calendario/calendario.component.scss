@@ -257,7 +257,18 @@ header {
   animation: snowFall 20s linear infinite;
 }
 
-/* Primavera */
+/* Primavera */.calendar-grid:has(.spring:hover)::before {
+  opacity: 1;
+  
+  /* Fondo verde muy sutil */
+  background: 
+    radial-gradient(circle at center, rgba(126,217,87,0.08), transparent 70%);
+  
+  /* Polens encima del fondo (ya animados) */
+  z-index: 0;
+  transition: background 0.6s ease;
+}
+
 .calendar-grid:has(.spring:hover) .pollen-layer span {
   animation-name: pollenDrift;
   animation-timing-function: linear;
