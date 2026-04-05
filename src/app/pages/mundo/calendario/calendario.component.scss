@@ -310,15 +310,29 @@ header {
 
 @keyframes leavesFall {
   0% {
-    transform: translateX(0) translateY(0) rotate(0deg);
+    top: -5%;
+    left: var(--x-start, 50%);
     opacity: 0.2;
   }
   10% {
     opacity: 1;
   }
   100% {
-    transform: translateX(calc(var(--x-move, 20px))) translateY(120vh) rotate(var(--rotate, 15deg));
+    top: 120vh;
+    left: calc(var(--x-start, 50%) + var(--x-move, 20px));
     opacity: 0;
+  }
+}
+
+@keyframes leavesSwing {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(40px) rotate(14deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
   }
 }
 
@@ -542,24 +556,25 @@ header {
 }
 
 .calendar-grid:has(.autumn:hover) .autumn-layer span {
-  animation-name: leavesFall;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  animation-name: leavesFall, leavesSwing;
+  animation-duration: var(--fall-duration, 9s), var(--swing-duration, 4s);
+  animation-timing-function: ease-in, cubic-bezier(0.42, 0, 0.58, 1);
+  animation-iteration-count: infinite, infinite;
+  animation-fill-mode: both, both;
 }
 
-.autumn-layer span:nth-child(1)  { --x-start: 10%; --x-move: 20px;  --rotate: 20deg;  --size: 12px; animation-duration: 8s;  animation-delay: 0s; }
-.autumn-layer span:nth-child(2)  { --x-start: 25%; --x-move: -15px; --rotate: -15deg; --size: 10px; animation-duration: 8.5s;  animation-delay: 1.2s; }
-.autumn-layer span:nth-child(3)  { --x-start: 40%; --x-move: 30px;  --rotate: 25deg;  --size: 14px; animation-duration: 10s; animation-delay: 2.5s; }
-.autumn-layer span:nth-child(4)  { --x-start: 55%; --x-move: -25px; --rotate: -20deg; --size: 11px; animation-duration: 7.5s; animation-delay: 0.8s; }
-.autumn-layer span:nth-child(5)  { --x-start: 70%; --x-move: 15px;  --rotate: 10deg;  --size: 13px; animation-duration: 9.5s; animation-delay: 1.7s; }
-.autumn-layer span:nth-child(6)  { --x-start: 85%; --x-move: -10px; --rotate: -30deg; --size: 12px; animation-duration: 8.8s; animation-delay: 0.3s; }
-.autumn-layer span:nth-child(7)  { --x-start: 30%; --x-move: 25px;  --rotate: 15deg;  --size: 14px; animation-duration: 10s; animation-delay: 2.1s; }
-.autumn-layer span:nth-child(8)  { --x-start: 60%; --x-move: -20px; --rotate: -10deg; --size: 12px; animation-duration: 9.2s; animation-delay: 1.3s; }
-.autumn-layer span:nth-child(9)  { --x-start: 15%; --x-move: 18px;  --rotate: 12deg;  --size: 10px; animation-duration: 8.5s; animation-delay: 2.8s; }
-.autumn-layer span:nth-child(10) { --x-start: 50%; --x-move: -22px; --rotate: -18deg; --size: 13px; animation-duration: 9.8s; animation-delay: 3.5s; }
-.autumn-layer span:nth-child(11) { --x-start: 35%; --x-move: 28px;  --rotate: 22deg;  --size: 12px; animation-duration: 10.5s; animation-delay: 4.2s; }
-.autumn-layer span:nth-child(12) { --x-start: 75%; --x-move: -16px; --rotate: -12deg; --size: 11px; animation-duration: 9.3s; animation-delay: 5s; }
+.autumn-layer span:nth-child(1)  { --x-start: 10%; --x-move: 20px;  --rotate: 20deg;  --size: 12px; --fall-duration: 8s;  --swing-duration: 4s; animation-delay: 0s; }
+.autumn-layer span:nth-child(2)  { --x-start: 25%; --x-move: -15px; --rotate: -15deg; --size: 10px; --fall-duration: 8.5s; --swing-duration: 4s; animation-delay: 1.2s; }
+.autumn-layer span:nth-child(3)  { --x-start: 40%; --x-move: 30px;  --rotate: 25deg;  --size: 14px; --fall-duration: 10s; --swing-duration: 4s; animation-delay: 2.5s; }
+.autumn-layer span:nth-child(4)  { --x-start: 55%; --x-move: -25px; --rotate: -20deg; --size: 11px; --fall-duration: 7.5s; --swing-duration: 4s; animation-delay: 0.8s; }
+.autumn-layer span:nth-child(5)  { --x-start: 70%; --x-move: 15px;  --rotate: 10deg;  --size: 13px; --fall-duration: 9.5s; --swing-duration: 4s; animation-delay: 1.7s; }
+.autumn-layer span:nth-child(6)  { --x-start: 85%; --x-move: -10px; --rotate: -30deg; --size: 12px; --fall-duration: 8.8s; --swing-duration: 4s; animation-delay: 0.3s; }
+.autumn-layer span:nth-child(7)  { --x-start: 30%; --x-move: 25px;  --rotate: 15deg;  --size: 14px; --fall-duration: 10s; --swing-duration: 4s; animation-delay: 2.1s; }
+.autumn-layer span:nth-child(8)  { --x-start: 60%; --x-move: -20px; --rotate: -10deg; --size: 12px; --fall-duration: 9.2s; --swing-duration: 4s; animation-delay: 1.3s; }
+.autumn-layer span:nth-child(9)  { --x-start: 15%; --x-move: 18px;  --rotate: 12deg;  --size: 10px; --fall-duration: 8.5s; --swing-duration: 4s; animation-delay: 2.8s; }
+.autumn-layer span:nth-child(10) { --x-start: 50%; --x-move: -22px; --rotate: -18deg; --size: 13px; --fall-duration: 9.8s; --swing-duration: 4s; animation-delay: 3.5s; }
+.autumn-layer span:nth-child(11) { --x-start: 35%; --x-move: 28px;  --rotate: 22deg;  --size: 12px; --fall-duration: 10.5s; --swing-duration: 4s; animation-delay: 4.2s; }
+.autumn-layer span:nth-child(12) { --x-start: 75%; --x-move: -16px; --rotate: -12deg; --size: 11px; --fall-duration: 9.3s; --swing-duration: 4s; animation-delay: 5s; }
 
 /* Glow texto */
 @keyframes glowPulse {
