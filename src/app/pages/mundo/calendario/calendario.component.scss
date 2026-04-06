@@ -37,25 +37,6 @@
   }
 }
 
-.calendar-grid::after {
-  content: '';
-  position: absolute;
-
-  width: 120%;
-  height: 120%;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%) scale(0.9);
-  transform-origin: center;
-
-  pointer-events: none;
-  z-index: 0;
-
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
 
 .pollen-layer {
   position: absolute;
@@ -122,7 +103,6 @@
 
   animation-fill-mode: backwards;
 }
-
 
 .seasons-images,
 .season-text,
@@ -353,10 +333,7 @@ header {
     radial-gradient(circle, rgba(255, 255, 255, 0.6) 3px, transparent 3px),
     radial-gradient(circle, rgba(255, 255, 255, 0.5) 2px, transparent 3px),
     radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 3px),
-    radial-gradient(circle, rgba(255, 255, 255, 0.55) 1px, transparent 3px),
-
-    /* Fondo azul */
-    radial-gradient(circle at center, rgba(74, 144, 226, 0.35), transparent 50%);
+    radial-gradient(circle, rgba(255, 255, 255, 0.55) 1px, transparent 3px);
 
   background-size:
     20% 20%,
@@ -370,16 +347,6 @@ header {
 }
 
 /* Primavera */
-.calendar-grid:has(.spring:hover)::before {
-  opacity: 1;
-
-  background:
-    radial-gradient(circle at center, rgba(126, 217, 87, 0.15), transparent 70%);
-
-  z-index: 0;
-  transition: background 0.6s ease;
-}
-
 .calendar-grid:has(.spring:hover) .pollen-layer span {
   animation-name: pollenDrift;
   animation-timing-function: linear;
@@ -473,21 +440,6 @@ header {
 }
 
 /* Verano */
-.calendar-grid:has(.summer:hover)::after {
-  opacity: 0.8;
-
-  background:
-    radial-gradient(circle at center,
-      rgba(255, 210, 100, 0.35),
-      rgba(255, 150, 50, 0.1),
-      transparent 70%),
-    radial-gradient(circle at center,
-      rgba(255, 255, 200, 0.08),
-      transparent 60%);
-
-  animation: summerBreath 4s ease-in-out infinite;
-}
-
 .calendar-grid:has(.summer:hover) .sun-layer span {
   animation-name: sunRise;
   animation-timing-function: linear;
@@ -556,13 +508,6 @@ header {
 }
 
 /* Otoño */
-.calendar-grid:has(.autumn:hover)::before {
-  opacity: 1;
-  background: radial-gradient(circle at center, rgba(255, 140, 60, 0.25), rgba(183, 92, 49, 0.1), transparent 70%);
-  background-size: 100% 100%;
-  transition: background 0.6s ease;
-}
-
 .calendar-grid:has(.autumn:hover) .autumn-layer span {
   animation-name: leavesFall, leavesSwing;
   animation-duration: var(--fall-duration, 9s), var(--swing-duration, 4s);

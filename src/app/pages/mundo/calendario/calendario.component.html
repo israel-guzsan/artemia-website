@@ -1,61 +1,47 @@
 <section class="calendar-grid">
   <header>
     <h1>Calendario</h1>
-    <p class="intro">El paso del tiempo está ligado a las calendas, flores que cambian con las estaciones.<br>
-      Durante la noche permanecen cerradas, con la luz del sol florecen mostrando su color.</p>
+    <p class="intro">
+      El paso del tiempo está ligado a las calendas, flores que cambian con las estaciones.<br>
+      Durante la noche permanecen cerradas, con la luz del sol florecen mostrando su color.
+    </p>
   </header>
 
   <div class="seasons-images">
-
-    <figure class="season-image winter">
+    <figure class="season-image winter" 
+            (mouseenter)="setSeason('winter')" 
+            (mouseleave)="setSeason('')">
       <img class="closed" src="assets/calendar/calenda-cerrada.png" alt="Calenda de invierno cerrada" />
       <img class="open" src="assets/calendar/calenda-invierno.png" alt="Calenda de invierno florecida" />
       <figcaption>Invierno</figcaption>
     </figure>
 
-    <figure class="season-image spring">
+    <figure class="season-image spring" 
+            (mouseenter)="setSeason('spring')" 
+            (mouseleave)="setSeason('')">
       <img class="closed" src="assets/calendar/calenda-cerrada.png" alt="Calenda de primavera cerrada" />
       <img class="open" src="assets/calendar/calenda-primavera.png" alt="Calenda de primavera florecida" />
       <figcaption>Primavera</figcaption>
     </figure>
 
-    <figure class="season-image summer">
+    <figure class="season-image summer" 
+            (mouseenter)="setSeason('summer')" 
+            (mouseleave)="setSeason('')">
       <img class="closed" src="assets/calendar/calenda-cerrada.png" alt="Calenda de verano cerrada" />
       <img class="open" src="assets/calendar/calenda-verano.png" alt="Calenda de verano florecida" />
       <figcaption>Verano</figcaption>
     </figure>
 
-    <figure class="season-image autumn">
+    <figure class="season-image autumn" 
+            (mouseenter)="setSeason('autumn')" 
+            (mouseleave)="setSeason('')">
       <img class="closed" src="assets/calendar/calenda-cerrada.png" alt="Calenda de otoño cerrada" />
       <img class="open" src="assets/calendar/calenda-otono.png" alt="Calenda de otoño florecida" />
       <figcaption>Otoño</figcaption>
     </figure>
-
   </div>
 
-  <div class="season-text">
-    <p class="winter-description">
-      El invierno es un tiempo de introspección y descanso. Las calendas permanecen cerradas, simbolizando la quietud y
-      el silencio de la naturaleza. Es un momento para reflexionar sobre el pasado y prepararse para el renacimiento que
-      traerá la primavera.
-    </p>
-    <p class="spring-description">
-      La primavera es un tiempo de renovación y esperanza. Las calendas florecen, mostrando su belleza y vitalidad. Es
-      un momento para celebrar el renacimiento de la vida, la creatividad y el crecimiento personal.
-    </p>
-    <p class="summer-description">
-      El verano es un tiempo de plenitud y abundancia. Las calendas están en su máximo esplendor, simbolizando la
-      energía y la vitalidad de la naturaleza. Es un momento para disfrutar de la vida, la alegría y la creatividad.
-    </p>
-    <p class="autumn-description">
-      El otoño es un tiempo de transición y reflexión. Las calendas comienzan a cerrarse, simbolizando el ciclo de la
-      vida y la preparación para el descanso invernal. Es un momento para valorar los logros y aprender de las
-      experiencias.
-    </p>
-  </div>
-
-
-  <div class="pollen-layer">
+   <div class="pollen-layer">
     <span></span>
     <span></span>
     <span></span>
@@ -96,5 +82,12 @@
     <span></span>
     <span></span>
     <span></span>
+  </div>
+
+  <div class="season-text">
+    <p class="winter-description">En invierno las calendas tienen un tono azul frío, reflejando la serenidad y el descanso de la naturaleza.</p>
+    <p class="spring-description">En primavera las calendas tienen un tono verde vibrante, simbolizando el renacimiento y la renovación de la vida.</p>
+    <p class="summer-description">En verano las calendas tienen un tono amarillo cálido, evocando la energía y la vitalidad del sol.</p>
+    <p class="autumn-description">En otoño las calendas tienen un tono naranja y rojo, representando la transición y la madurez de la naturaleza.</p>
   </div>
 </section>

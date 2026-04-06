@@ -26,3 +26,23 @@
 .content {
   padding: 24px;
 }
+
+.global-season-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.main-header,
+.content {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+router-outlet {
+  position: relative;
+  z-index: 1;
+}

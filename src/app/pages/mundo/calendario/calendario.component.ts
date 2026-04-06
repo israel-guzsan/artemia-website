@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SeasonService } from '../../../core/season.service';
 
 @Component({
   selector: 'app-calendario',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class CalendarioComponent {
 
+  private seasonService = inject(SeasonService);
+
+  setSeason(season: any) {
+    this.seasonService.setSeason(season);
+  }
 }
