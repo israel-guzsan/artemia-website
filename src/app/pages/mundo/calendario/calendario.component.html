@@ -8,14 +8,6 @@
   </header>
 
   <div class="seasons-images">
-    <figure class="season-image winter" 
-            (mouseenter)="setSeason('winter')" 
-            (mouseleave)="setSeason('')">
-      <img class="closed" src="assets/calendar/calenda-cerrada.png" alt="Calenda de invierno cerrada" />
-      <img class="open" src="assets/calendar/calenda-invierno.png" alt="Calenda de invierno florecida" />
-      <figcaption>Invierno</figcaption>
-    </figure>
-
     <figure class="season-image spring" 
             (mouseenter)="setSeason('spring')" 
             (mouseleave)="setSeason('')">
@@ -38,6 +30,14 @@
       <img class="closed" src="assets/calendar/calenda-cerrada.png" alt="Calenda de otoño cerrada" />
       <img class="open" src="assets/calendar/calenda-otono.png" alt="Calenda de otoño florecida" />
       <figcaption>Otoño</figcaption>
+    </figure>
+
+    <figure class="season-image winter" 
+            (mouseenter)="setSeason('winter')" 
+            (mouseleave)="setSeason('')">
+      <img class="closed" src="assets/calendar/calenda-cerrada.png" alt="Calenda de invierno cerrada" />
+      <img class="open" src="assets/calendar/calenda-invierno.png" alt="Calenda de invierno florecida" />
+      <figcaption>Invierno</figcaption>
     </figure>
   </div>
 
@@ -85,9 +85,9 @@
   </div>
 
   <div class="season-text">
-    <p class="winter-description">En invierno las calendas tienen un tono azul frío, reflejando la serenidad y el descanso de la naturaleza.</p>
     <p class="spring-description">En primavera las calendas tienen un tono verde vibrante, simbolizando el renacimiento y la renovación de la vida.</p>
     <p class="summer-description">En verano las calendas tienen un tono amarillo cálido, evocando la energía y la vitalidad del sol.</p>
     <p class="autumn-description">En otoño las calendas tienen un tono naranja y rojo, representando la transición y la madurez de la naturaleza.</p>
+    <p class="winter-description">En invierno las calendas tienen un tono azul frío, reflejando la serenidad y el descanso de la naturaleza.</p>
   </div>
 </section>
