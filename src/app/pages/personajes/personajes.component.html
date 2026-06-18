@@ -1,1 +1,3 @@
-<p>personajes works!</p>
+@for (character of characters; track character.id) {
+  <li>{{ character.Name }}</li>
+}
