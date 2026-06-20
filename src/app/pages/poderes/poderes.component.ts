@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FactionsService } from '../../core/supabase-services/factions.service';
 
 @Component({
   selector: 'app-poder',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './poderes.component.scss',
   standalone: true
 })
+
 export class PoderesComponent {
+
+  factions: any[] = [];
+
+  private factionsService = inject(FactionsService);
+
+  async ngOnInit() {
+    this.factions = await this.factionsService.getFactions();
+  }
 
 }
